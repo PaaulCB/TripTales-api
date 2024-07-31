@@ -59,7 +59,7 @@ DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOST'),'8000-paaulcb-triptalesapi-u3ohwk03sth.ws.codeinstitute-ide.net']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-paaulcb-triptalesapi-u3ohwk03sth.ws.codeinstitute-ide.net']
+CSRF_TRUSTED_ORIGINS = ['https://8000-paaulcb-triptalesapi-u3ohwk03sth.ws.codeinstitute-ide.net', 'https://triptales-e15436dab61c.herokuapp.com/']
 
 # Application definition
 
