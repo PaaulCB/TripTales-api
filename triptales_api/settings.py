@@ -56,7 +56,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['8000-paaulcb-triptalesapi-u3ohwk03sth.ws.codeinstitute-ide.net','triptales.herokuapp.com']
+ALLOWED_HOSTS = ['8000-paaulcb-triptalesapi-u3ohwk03sth.ws.codeinstitute-ide.net','https://triptales-e15436dab61c.herokuapp.com']
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-paaulcb-triptalesapi-u3ohwk03sth.ws.codeinstitute-ide.net']
 
