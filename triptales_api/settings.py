@@ -59,9 +59,11 @@ DEBUG = 'DEV' in os.environ
 
 # ALLOWED_HOSTS = ['https://triptales-e15436dab61c.herokuapp.com','8000-paaulcb-triptalesapi-u3ohwk03sth.ws.codeinstitute-ide.net']
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['https://8000-paaulcb-triptalesapi-u3ohwk03sth.ws.codeinstitute-ide.net', 'https://triptales-e15436dab61c.herokuapp.com']
+# CSRF_TRUSTED_ORIGINS = ['https://8000-paaulcb-triptalesapi-u3ohwk03sth.ws.codeinstitute-ide.net', 'https://triptales-e15436dab61c.herokuapp.com']
 
-# CORS_ALLOWED_ORIGINS = ['https://your-frontend-app-name.herokuapp.com']
+CORS_ALLOWED_ORIGINS = [
+    'https://triptales-e15436dab61c.herokuapp.com',
+]
 
 # Application definition
 
