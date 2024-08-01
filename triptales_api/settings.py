@@ -57,7 +57,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOST'),'8000-paaulcb-triptalesapi-u3ohwk03sth.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['https://triptales-e15436dab61c.herokuapp.com/','8000-paaulcb-triptalesapi-u3ohwk03sth.ws.codeinstitute-ide.net']
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-paaulcb-triptalesapi-u3ohwk03sth.ws.codeinstitute-ide.net', 'https://triptales-e15436dab61c.herokuapp.com/']
 
@@ -103,11 +103,15 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-if 'CLIENT_ORIGIN_DEV' in os.environ:
-    extracted_url = re.match(r'^.+-', os.environ.get('CLIENT_ORIGIN_DEV', ''), re.IGNORECASE).group(0)
-    CORS_ALLOWED_ORIGIN_REGEXES = [
-        rf"{extracted_url}(eu|us)\d+\w\.gitpod\.io$",
+if 'CLIENT_ORIGIN' in os.environ:
+    CORS_ALLOWED_ORIGINS = [
+        os.environ.get('CLIENT_ORIGIN')
     ]
+else:
+    CORS_ALLOWED_ORIGIN_REGEXES = [
+        r"^https://.*\.gitpod\.io$",
+    ]
+
 CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = 'triptales_api.urls'
